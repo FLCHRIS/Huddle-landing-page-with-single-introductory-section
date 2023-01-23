@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: hsl(257deg, 40%, 49%);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: hsl(300deg, 69%, 71%);
+  border-radius: 2px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.main {
+  font-size: 1.5rem;
+  background-color: hsl(257deg, 40%, 49%);
+  background-image: url("../images/bg-mobile.svg");
+  background-size: 100% 100%;
+  padding: 2em 0;
+  min-height: 100vh;
+}
+.main .main-logo {
+  width: 10em;
+  margin-bottom: 3em;
+}
+.main .main__data .main-illustration {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.main .main__data .data__container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.main .main__data .data__container .main-title, .main .main__data .data__container .main-paragraph {
+  text-align: center;
+  margin: 1em 0 0.5em;
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.main .main__data .data__container .main-paragraph {
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.main .main__data .data__container .main-cta {
+  background-color: #fff;
+  color: hsl(257deg, 40%, 49%);
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 1em auto 3em;
+  padding: 0.6em 3.5em;
+  border-radius: 1.4em;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 1.5rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, color 0.3s;
+}
+.main .main__data .data__container .main-cta:hover {
+  color: #fff;
+  background-color: hsl(300deg, 69%, 71%);
+}
+.main .main__media {
+  min-height: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.main .main__media a {
+  text-decoration: none;
+}
+.main .main__media a i {
+  color: #fff;
+  transition: color 0.5s ease;
+}
+.main .main__media a i:hover {
+  color: hsl(300deg, 69%, 71%);
+}
+.main .main-attribution {
+  text-align: end;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.main .main-attribution a {
+  text-decoration: none;
+  font-weight: 600;
+  color: hsl(300deg, 69%, 71%);
+}
+
+@media screen and (min-width: 900px) {
+  .main {
+    font-size: 1.7rem;
+    background-image: url("../images/bg-mobile.svg");
+  }
+  .main .main-logo {
+    width: 12em;
+  }
+  .main .main__data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .main .main__data .main-illustration {
+    max-width: 800px;
+  }
+  .main .main__data .data__container {
+    max-width: 500px;
+  }
+  .main .main__data .data__container .main-title, .main .main__data .data__container .main-paragraph {
+    text-align: start;
+    font-size: 3rem;
+  }
+  .main .main__data .data__container .main-paragraph {
+    font-size: 1.7rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .main .main__data .data__container .main-cta {
+    margin: 1em 0 3em;
+    font-size: 1.7rem;
+  }
+  .main .main__media {
+    justify-content: end;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+$Violet: hsl(257, 40%, 49%);
+$SoftMagenta: hsl(300, 69%, 71%);
+
+$fontOpenSans: 'Open Sans', sans-serif;
+$fontPoppins: 'Poppins', sans-serif;
+
+html {
+    font-size: 62.5%;
+}
+body{
+    &::-webkit-scrollbar {
+        width: 12px;
+        background-color: $Violet;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $SoftMagenta;
+        border-radius: 2px;
+    }
+}
+// MAIN
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.main {
+    font-size: 1.5rem;
+    background-color: $Violet;
+    background-image: url('../images/bg-mobile.svg');
+    background-size: 100% 100%;
+    padding: 2em 0;
+    min-height: 100vh;
+    .main-logo {
+        width: 10em;
+        margin-bottom: 3em;
+    }
+    .main__data {
+        .main-illustration {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .data__container {
+            max-width: 500px;
+            margin: 0 auto;
+            .main-title {
+                text-align: center;
+                margin: 1em 0 .5em;
+                font-size: 2.5rem;
+                color: #fff;
+                font-family: $fontPoppins;
+                font-weight: 600;
+                line-height: 1.7;
+            }
+            .main-paragraph {
+                @extend .main-title;
+                font-size: 1.5rem;
+                font-family: $fontOpenSans;
+                font-weight: 400;
+                line-height: 1.5;
+            }
+            .main-cta {
+                background-color: #fff;
+                color: $Violet;
+                display: block;
+                width: max-content;
+                margin: 1em auto 3em;
+                padding: .6em 3.5em;
+                border-radius: 1.4em;
+                font-family: $fontPoppins;
+                text-decoration: none;
+                font-size: 1.5rem;
+                box-shadow: 0px 0px 10px 0px rgba(#000, .3);
+                transition: background-color .3s, color .3s;
+                &:hover {
+                    color: #fff;
+                    background-color: $SoftMagenta;
+                }
+            }
+        }
+    }
+    .main__media {
+        min-height: 3em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        a {
+            text-decoration: none;
+            i {
+                color: #fff;
+                transition: color .5s ease;
+                &:hover {
+                    color: $SoftMagenta;
+                }
+            }
+        }
+    }
+    .main-attribution {
+        text-align: end;
+        line-height: 1.5;
+        font-family: $fontPoppins;
+        font-size: 1.1rem;
+        color: #fff;
+        a {
+            text-decoration: none;
+            font-weight: 600;
+            color: $SoftMagenta;
+        }
+    }
+}
+@media screen and (min-width: 900px){
+    .main {
+        font-size: 1.7rem;
+        background-image: url('../images/bg-mobile.svg');
+        .main-logo {
+            width: 12em;
+        }
+        .main__data {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+            align-items: center;
+            justify-content: space-between;
+            .main-illustration {
+                max-width: 800px;
+            }
+            .data__container {
+                max-width: 500px;
+                .main-title {
+                    text-align: start;
+                    font-size: 3rem;
+                }
+                .main-paragraph {
+                    @extend .main-title;
+                    font-size: 1.7rem;
+                    font-family: $fontOpenSans;
+                    font-weight: 400;
+                    line-height: 1.5;
+                }
+                .main-cta {
+                    margin: 1em 0 3em;
+                    font-size: 1.7rem;
+                }
+            }
+        }
+        .main__media {
+            justify-content: end;
+        }
+    }
+}
